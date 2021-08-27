@@ -1,0 +1,197 @@
+:root {
+  --primary-color: #f05f40;
+  --secondry-color: #191b1d;
+  --home: url("../img/header.jpg"); }
+
+.w_f, header .logo, header ul {
+  width: 50%;
+  float: left; }
+
+.h2, .home .home-content h2, .need h2, .service h2, .download h2, .get-touch h2 {
+  font-size: 3rem;
+  color: #fff; }
+
+.span, .home .home-content span, .need span, .service span, .get-touch > span {
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin: 10px auto;
+  background: var(--primary-color); }
+
+.p, .home .home-content p, .need p, .get-touch p {
+  margin: 1.5rem 0;
+  color: #c9c5bd;
+  letter-spacing: 3px;
+  line-height: 1.5; }
+
+.button, .home .home-content button, .need button, .download button {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: ease-in-out all 0.5s; }
+  .button:hover, .home .home-content button:hover, .need button:hover, .download button:hover {
+    background-color: black; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.container {
+  width: 85%;
+  margin: auto; }
+
+header {
+  background: var(--secondry-color);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 999;
+  overflow: hidden; }
+  header .logo h2 {
+    padding: 10px 0;
+    color: #c9c5bd; }
+  header ul {
+    padding: 10px 0;
+    display: flex;
+    list-style: none; }
+    header ul li {
+      padding: 10px 15px; }
+      header ul li a {
+        text-decoration: none;
+        color: #c9c5bd;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: ease-in-out all 0.5s; }
+        header ul li a:hover {
+          color: var(--primary-color); }
+
+.home {
+  background: var(--home);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative; }
+  .home .home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%); }
+
+.need {
+  text-align: center;
+  padding: 3rem 0;
+  background: var(--primary-color); }
+  .need span {
+    background: #fff; }
+  .need button {
+    background: #fff;
+    color: #000; }
+    .need button:hover {
+      color: #fff; }
+
+.service {
+  text-align: center;
+  padding: 5rem 0;
+  background: #fff; }
+  .service h2 {
+    color: #000;
+    font-weight: bold; }
+  .service .service-parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: 1.5rem 0; }
+    .service .service-parent i {
+      color: var(--primary-color); }
+    .service .service-parent h3 {
+      color: #333;
+      margin: 1rem 0; }
+    .service .service-parent P {
+      color: #a4a4a4; }
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  font-size: 0; }
+  .images div img {
+    width: 100%; }
+
+.download {
+  text-align: center;
+  padding: 5rem 0;
+  background-color: var(--secondry-color); }
+
+.get-touch {
+  text-align: center;
+  padding: 5rem 0; }
+  .get-touch h2 {
+    color: #333; }
+  .get-touch .touch {
+    display: flex;
+    justify-content: center; }
+    .get-touch .touch .item {
+      margin: 1rem 1.5rem; }
+      .get-touch .touch .item i {
+        display: block; }
+
+.up {
+  width: 30px;
+  background-color: var(--primary-color);
+  color: #fff;
+  position: fixed;
+  padding: 10px 25px;
+  bottom: 10px;
+  right: -90px;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px; }
+
+.up.show {
+  right: 10px; }
+
+@media (max-width: 768px) {
+  .w_f, header .logo, header ul {
+    width: 100%;
+    float: none; }
+  header {
+    text-align: center;
+    position: static; }
+    header ul {
+      display: block; }
+  .h2, .home .home-content h2, .need h2, .service h2, .download h2, .get-touch h2 {
+    font-size: 1.5rem; }
+  .service .service-parent {
+    grid-template-columns: repeat(2, 1fr); }
+  .images {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (min-width: 769px) and (max-width: 1170px) {
+  .images {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 575px) {
+  .service .service-parent {
+    grid-template-columns: 1fr; }
+  .images {
+    grid-template-columns: 1fr; } }
